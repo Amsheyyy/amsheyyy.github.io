@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amshu-Portfolio</title>
+        <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <div class="hero">
+        <nav>
+            <h1 class="logo"><span>Am</span>shu.</h1>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="experience.html">Experience</a></li> 
+                <li class="dropdown">
+                    <a href="skill.html">Skills</a>
+                </li>  
+                <li><a href="blog.html">Blog</a></li>  
+                <li class="dropdown">
+                    <a href="Contact.html">Contact</a>
+                    <ul class="submenu">
+                        <li><a href="mailto:adhikariamshu62@gmail.com">Email</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="coming-soon-page">
+            <h1>My Blog</h1>
+            <p>Coming Soon!</p>
+            <div class="countdown">
+                <div class="clock-item">
+                    <span id="days">100</span>
+                    <p>Days</p>
+                </div>
+                <div class="clock-item">
+                    <span id="hours">20</span>
+                    <p>Hours</p>
+                </div>
+                <div class="clock-item">
+                    <span id="minutes">60</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="clock-item">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var countDownDate = new Date("April 29, 2025 00:00:00").getTime();
+
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+        
+          var distance = countDownDate - now;
+        
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "TIME UP!";
+          }
+        }, 1000);
+        </script>
+</body>
+
+</html>
